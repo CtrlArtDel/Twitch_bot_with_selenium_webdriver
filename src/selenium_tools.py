@@ -18,9 +18,7 @@ def scroll_down(driver, scrolls=1):
         time.sleep(2)
 
 def find_element_by_locator_and_store_elements_in_list(driver, locator, timeout=60):
-    elements = WebDriverWait(driver, timeout).until(
-        EC.presence_of_all_elements_located(locator)
-    )
+    elements = WebDriverWait(driver, timeout).until(EC.presence_of_all_elements_located(locator))
     return elements
 
 
